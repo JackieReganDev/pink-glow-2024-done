@@ -169,6 +169,34 @@
 
 			//contact form.
 
+  document.getElementById('three').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission behavior
+
+    // Create a FormData object from the form element
+    var formData = new FormData(this);
+
+    // Send form data using Fetch API
+    fetch(this.action, {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        // If form submission is successful, refresh the page
+        window.location.reload();
+      } else {
+        // Handle errors
+        alert('Form submission failed.');
+      }
+    }).catch(error => {
+      console.error('Error:', error);
+      alert('Form submission failed.');
+    });
+  });
+
+
 document.querySelector('form').addEventListener('submit', function(event) {
   const name = document.querySelector('input[name="name"]').value;
   const email = document.querySelector('input[name="email"]').value;
