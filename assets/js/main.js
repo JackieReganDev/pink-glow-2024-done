@@ -169,7 +169,7 @@
 
 			//contact form.
 
-  document.getElementById('three').addEventListener('submit', function(event) {
+  document.getElementById('myForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent default form submission behavior
 
     // Create a FormData object from the form element
