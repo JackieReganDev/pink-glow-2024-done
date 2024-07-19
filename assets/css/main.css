@@ -2589,7 +2589,7 @@ input, select, textarea {
 
 		.image.left {
 			float: left;
-			margin: 0 1.5em 1em 0;
+			margin: 0 .5em .5em 0;
 			top: 0.25em;
 		}
 
@@ -2618,6 +2618,10 @@ input, select, textarea {
 			.image.main img {
 				width: 100%;
 			}
+
+		.image.left img{
+			width: 100%;
+		}
 
 /* List */
 
@@ -2681,12 +2685,18 @@ input, select, textarea {
 
 	@media screen and (max-width: 480px) {
 
-		#pure {
-			min-width: 320px;
-			max-height: 50% !important;
+		.image.left img {
+			width: 100%;
+			max-width: 100% !important;
+			max-height: 150px !important;
 		}
 		#four.inner{
 			height: 680px;
+		}
+
+		span .image.left {
+			max-height: fit-content;
+
 		}
 
 	}
@@ -3245,7 +3255,7 @@ input, select, textarea {
 			border-bottom: 2px solid #70480D;
 		}
 .left{
-	padding-bottom: 50px;
+	padding-bottom: 5px;
 }
 /* Wrapper */
 
