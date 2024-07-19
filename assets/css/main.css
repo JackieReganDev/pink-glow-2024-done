@@ -1551,6 +1551,7 @@ input, select, textarea {
 
 		}
 
+
 		@media screen and (max-width: 480px) {
 
 			.row {
@@ -1946,7 +1947,7 @@ input, select, textarea {
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			border-color: #fee8e8 !important;
+			border-color: #000000 !important;
 		}
 
 			input[type="submit"]:hover:after,
@@ -1959,6 +1960,10 @@ input, select, textarea {
 				-webkit-transform: scale(1);
 				-ms-transform: scale(1);
 				transform: scale(1);
+			}
+
+			#book-button {
+				margin-left:85px;
 			}
 
 			input[type="submit"]:hover:active,
@@ -2671,6 +2676,29 @@ input, select, textarea {
 				width: 50%;
 			}
 		}
+
+	/* PureRaum image */
+
+	@media screen and (max-width: 480px) {
+
+		#pure {
+			min-width: 320px;
+			max-height: 50% !important;
+		}
+		#four.inner{
+			height: 680px;
+		}
+
+	}
+
+	/* book now button on top section */
+
+	@media screen and (max-width: 480px) {
+
+		#book-button {
+			margin-left: 0 !important;
+		}
+	}
 
 /* Actions */
 
