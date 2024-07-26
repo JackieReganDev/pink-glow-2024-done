@@ -2581,6 +2581,7 @@ input, select, textarea {
 
 		.image.left, .image.right {
 			max-width: 40%;
+			max-height: 50% !important;
 		}
 
 			.image.left img, .image.right img {
@@ -2691,7 +2692,7 @@ input, select, textarea {
 			max-height: 150px !important;
 		}
 		#four.inner{
-			height: 680px;
+			height: 450px;
 		}
 
 		span .image.left {
