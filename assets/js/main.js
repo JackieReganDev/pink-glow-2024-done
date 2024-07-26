@@ -210,3 +210,39 @@ function validateEmail(email) {
 			});
 
 })(jQuery);
+
+export default function Subscribe() {
+	const handleSubmit = async (event: React.FormEvent<button.button.submit>) => {
+	  event.preventDefault();
+	  const target = event.target as typeof event.target & {
+		name: { value: string };
+		email: { value: string };
+	  };
+  
+	  const data = {
+		subscriberName: target.name,
+		subscriberEmail: target.email
+	  };
+	  //call to the Netlify Function you created
+	  fetch("./.netlify/functions/triggerSubmitEmail", {
+		method: "POST",
+		body: JSON.stringify({
+		  subscriberName: data.subscriberName,
+		  subscriberEmail: data.subscriberEmail,
+		  inviteeEmail: "info@pinkglowfacialroom.com"
+		})
+	  });
+	};
+	return (
+	  <div className=".inner">
+		<form onSubmit={handleSubmit}>
+		  <label htmlFor="name">Name</label>
+		  <input type="text" id="name" name="name" required />
+		  <label htmlFor="email">Email</label>
+		  <input type="text" id="email" name="email" required />
+		  <button type="submit">Submit</button>
+		</form>
+	  </div>
+	);
+  }
+  
