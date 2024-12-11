@@ -235,6 +235,7 @@ input, select, textarea {
 		font-size: 0.6em;
 	}
 
+
 	@media screen and (max-width: 736px) {
 
 		h1 {
@@ -570,6 +571,9 @@ input, select, textarea {
 				.row.gtr-200.gtr-uniform > * {
 					padding-top: 3em;
 				}
+
+
+			
 
 		@media screen and (max-width: 1680px) {
 
@@ -1820,6 +1824,11 @@ input, select, textarea {
 
 /* Button */
 
+.button2{
+	padding-bottom: 30px !important;
+}
+
+
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
@@ -1879,6 +1888,8 @@ input, select, textarea {
 			width: 100%;
 		}
 
+
+
 		input[type="submit"].icon:before,
 		input[type="reset"].icon:before,
 		input[type="button"].icon:before,
@@ -1900,7 +1911,7 @@ input, select, textarea {
 		input[type="button"].small,
 		button.small,
 		.button.small {
-			font-size: 0.4em;
+			font-size: 0.5em;
 		}
 
 		input[type="submit"].large,
